@@ -15,14 +15,14 @@
   --yellow: #fbff2f;
   --green: #28a745;
   --teal: #20c997;
-  --cyan: #17a2b8;
+  --cyan: #2fffc1;
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
   --primary: #fbff2f;
   --secondary: #6c757d;
   --success: #28a745;
-  --info: #17a2b8;
+  --info: #2fffc1;
   --warning: #fbff2f;
   --danger: #dc3545;
   --light: #f8f9fa;
@@ -1117,12 +1117,12 @@ button.bg-success:focus {
   background-color: #1e7e34 !important; }
 
 .bg-info {
-  background-color: #17a2b8 !important; }
+  background-color: #2fffc1 !important; }
 
 a.bg-info:hover, a.bg-info:focus,
 button.bg-info:hover,
 button.bg-info:focus {
-  background-color: #117a8b !important; }
+  background-color: #00fbb0 !important; }
 
 .bg-warning {
   background-color: #fbff2f !important; }
@@ -1202,7 +1202,7 @@ button.bg-dark:focus {
   border-color: #28a745 !important; }
 
 .border-info {
-  border-color: #17a2b8 !important; }
+  border-color: #2fffc1 !important; }
 
 .border-warning {
   border-color: #fbff2f !important; }
@@ -3447,10 +3447,10 @@ a.text-success:hover, a.text-success:focus {
   color: #19692c !important; }
 
 .text-info {
-  color: #17a2b8 !important; }
+  color: #2fffc1 !important; }
 
 a.text-info:hover, a.text-info:focus {
-  color: #0f6674 !important; }
+  color: #00e29e !important; }
 
 .text-warning {
   color: #fbff2f !important; }
@@ -3725,6 +3725,33 @@ a.text-dark:hover, a.text-dark:focus {
 a {
   outline: none; }
 
+.p-container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+
+@media (min-width: 576px) {
+  .p-container, .p-container-sm {
+    padding-left: calc(50% - 270px + 15px);
+    padding-right: calc(50% - 270px + 15px); } }
+
+@media (min-width: 768px) {
+  .p-container, .p-container-sm, .p-container-md {
+    padding-left: calc(50% - 360px + 15px);
+    padding-right: calc(50% - 360px + 15px); } }
+
+@media (min-width: 992px) {
+  .p-container, .p-container-sm, .p-container-md, .p-container-lg {
+    padding-left: calc(50% - 480px + 15px);
+    padding-right: calc(50% - 480px + 15px); } }
+
+@media (min-width: 1200px) {
+  .p-container, .p-container-sm, .p-container-md, .p-container-lg, .p-container-xl {
+    padding-left: calc(50% - 570px + 15px);
+    padding-right: calc(50% - 570px + 15px); } }
+
 /*
  * HERE YOUR GLOBAL STYLES
  */
@@ -3743,7 +3770,7 @@ body {
   overflow: hidden auto; }
 
 a:hover {
-  color: #17a2b8; }
+  color: #2fffc1; }
 
 .wg-Header {
   padding: 30px 0;
@@ -3777,11 +3804,19 @@ a:hover {
     width: 80%;
     margin-left: auto; }
 
+.wg-DateStart {
+  border: 1px solid #2fffc1;
+  clip-path: polygon(0 0.75rem, 0 0, 0.75rem 0, 0.75rem 2px, calc(100% - 0.75rem) 2px, calc(100% - 0.75rem) 0, 100% 0, 100% 0.75rem, calc(100% - 2px - 1px) 0.75rem, calc(100% - 2px - 1px) calc(100% - 0.75rem), 100% calc(100% - 0.75rem), 100% 100%, calc(100% - 0.75rem) 100%, calc(100% - 0.75rem) calc(100% - 2px - 1px), 0.75rem calc(100% - 2px - 1px), 0.75rem 100%, 0 100%, 0 calc(100% - 0.75rem), 2px calc(100% - 0.75rem), 2px 0.75rem);
+  padding: 1.125rem 2.8125rem;
+  font-family: "Copperplate", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 2rem;
+  display: inline-block; }
+
 body::after {
   position: fixed;
   content: 'xl';
   display: block;
-  background: #17a2b8;
+  background: #2fffc1;
   color: #6c757d;
   left: 5px;
   bottom: 5px;
@@ -3839,30 +3874,3 @@ body::before, body::after {
     content: 'xs'; }
   html {
     font-size: 12px; } }
-
-.p-container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto; }
-
-@media (min-width: 576px) {
-  .p-container, .p-container-sm {
-    padding-left: calc(50% - 270px + 15px);
-    padding-right: calc(50% - 270px + 15px); } }
-
-@media (min-width: 768px) {
-  .p-container, .p-container-sm, .p-container-md {
-    padding-left: calc(50% - 360px + 15px);
-    padding-right: calc(50% - 360px + 15px); } }
-
-@media (min-width: 992px) {
-  .p-container, .p-container-sm, .p-container-md, .p-container-lg {
-    padding-left: calc(50% - 480px + 15px);
-    padding-right: calc(50% - 480px + 15px); } }
-
-@media (min-width: 1200px) {
-  .p-container, .p-container-sm, .p-container-md, .p-container-lg, .p-container-xl {
-    padding-left: calc(50% - 570px + 15px);
-    padding-right: calc(50% - 570px + 15px); } }

@@ -1,0 +1,8 @@
+.wg-DateStart {
+  @include corners(rem(12px) 1px solid $info);
+
+  padding: rem(18px) rem(45px);
+  font-family: $accent-font;
+  font-size: rem(32px);
+  display: inline-block;
+}
