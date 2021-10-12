@@ -1,0 +1,35 @@
+.p-container {
+  @include make-container();
+}
+
+// Responsive containers that are 100% wide until a breakpoint
+@each $breakpoint, $container-max-width in $container-max-widths {
+  .p-container-#{$breakpoint} {
+    @extend .container-fluid;
+  }
+
+  @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+    $gutter: $grid-gutter-width / 2;
+    $pcontainer-padding: $container-max-width / 2;
+
+    %responsive-pcontainer-#{$breakpoint} {
+      padding-left: calc(50% - #{$pcontainer-padding} + #{$gutter});
+      padding-right: calc(50% - #{$pcontainer-padding} + #{$gutter});
+    }
+
+    $extend-breakpoint: true;
+
+    @each $name, $width in $grid-breakpoints {
+      @if ($extend-breakpoint) {
+        .p-container#{breakpoint-infix($name, $grid-breakpoints)} {
+          @extend %responsive-pcontainer-#{$breakpoint};
+        }
+
+        // Once the current breakpoint is reached, stop extending
+        @if ($breakpoint == $name) {
+          $extend-breakpoint: false;
+        }
+      }
+    }
+  }
+}

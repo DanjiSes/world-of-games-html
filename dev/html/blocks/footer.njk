@@ -1,0 +1,64 @@
+{%set phone = { "t": "8 800 700 37 79", "l": "88007003779" } %}
+
+<footer class="footer py-5 text-white text-13" style="background: #333">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-3 col-md-2 mb-4 mb-lg-0">
+        <img src="static/images/logo-footer.png" alt="Логотип древмасс" class="img-fluid" style="width: 100%; max-width: 155px;">
+      </div>
+      <div class="col-12 col-sm-4 col-md-3 col-lg-2 mb-4 mb-lg-0 pl-sm-0">
+        <p class="text-secondary text-13" style="max-width: 260px;">Производим медицинские тренажеры-массажеры для спины с 2012 года. Продаем и доставляем по всему миру.</p>
+        <a href="#callBackModal" data-toggle="modal" class="btn text-white bg-info rounded-pill py-2 px-2 text-center text-13">
+          Подберем вам массажер
+        </a>
+      </div>
+      <div class="col-12 col-sm-5 col-md-2 mb-4 mb-lg-0">
+        <ul class="list-unstyled m-0">
+          <li class="mb-2"><b>Ссылки</b></li>
+          <li class="mb-2 font-weight-light">
+            <a href="#goals" class="text-white js-scrollTo">Как снять боль?</a>
+          </li>
+          <li class="mb-2 font-weight-light">
+            <a href="#dops" class="text-white js-scrollTo">Комплектация</a>
+          </li>
+          <li class="mb-2 font-weight-light">
+            <a href="#otzivy" class="text-white js-scrollTo">Отзывы</a>
+          </li>
+          <li class="mb-2 font-weight-light">
+            <a href="#garantiya" class="text-white js-scrollTo">Гарантия</a>
+          </li>
+          {# <li class="mb-2 font-weight-light">
+            <a href="#" class="text-white">Контакты</a>
+          </li> #}
+        </ul>
+      </div>
+      <div class="col-12 col-sm-7 col-md-4 offset-md-1 offset-lg-0 col-lg-2 mb-4 mb-lg-0">
+        <div class="mb-1"><b>Контакты</b></div>
+
+        <a href="tel:{{ phone.l }}"
+          class="text-20 text-white font-weight-bold mb-1 d-block">
+          {{ phone.t }}
+        </a>
+        
+        <a href="https://www.instagram.com/drevmass/" class="d-inline-block align-middle mr-2" target="_blank">
+          <img src="static/images/inst.svg" alt="Whats App" class="img-fluid">
+        </a>
+        <a href="https://vk.com/drevmass" class="d-inline-block align-middle mr-2" target="_blank">
+          <img src="static/images/vk.svg" alt="Phone" class="img-fluid">
+        </a>
+        <a href="https://www.youtube.com/channel/UCp-ejyJAQOG8e4E2oG5qHAw" class="d-inline-block align-middle mr-2" target="_blank">
+          <img src="static/images/youtube.svg" alt="YouTube" class="img-fluid">
+        </a>
+
+        <p class="mt-3 font-weight-light">Работаем с 09:00 до 21:00 по МСК</p>
+      </div>
+      <div class="col-12 col-sm-5 col-lg-4 mt-md-4 mt-md-5 mt-lg-0">
+        <div class="mb-2"><b>Правовая информация</b></div>
+
+        <p class="text-secondary" style="max-width: 350px;">Cайт защищён авторским правом. Копирование материалов запрещено. ИП Кутянина Татьяна Серафимовна ИНН: 526097480524, ОГРНИП: 315526000000662 г. Н.Новгород, ул. Верхне-Печерская, 7Б (ТЦ «Олимп», офис «Древмасс»)</p>
+
+        <a href="#policyModal" data-toggle="modal" class="text-white font-weight-light">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </div>
+</footer>
