@@ -18,7 +18,8 @@ html, body {
 }
 
 body {
-	background: linear-gradient(90deg, #FFFFFF 0%, #F0F0F0 100%);
+	background: $black;
+	color: $white;
 	overflow: hidden auto;
 }
 
