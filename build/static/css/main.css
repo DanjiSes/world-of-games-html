@@ -12,18 +12,18 @@
   --pink: #e83e8c;
   --red: #dc3545;
   --orange: #fd7e14;
-  --yellow: #ffc107;
+  --yellow: #FBFF2F;
   --green: #28a745;
   --teal: #20c997;
   --cyan: #17a2b8;
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #007bff;
+  --primary: #FBFF2F;
   --secondary: #6c757d;
   --success: #28a745;
   --info: #17a2b8;
-  --warning: #ffc107;
+  --warning: #FBFF2F;
   --danger: #dc3545;
   --light: #f8f9fa;
   --dark: #343a40;
@@ -131,11 +131,11 @@ sup {
   top: -.5em; }
 
 a {
-  color: #007bff;
+  color: #FBFF2F;
   text-decoration: none;
   background-color: transparent; }
   a:hover {
-    color: #0056b3;
+    color: #dde200;
     text-decoration: underline; }
 
 a:not([href]):not([class]) {
@@ -1093,12 +1093,12 @@ mark,
   vertical-align: text-top !important; }
 
 .bg-primary {
-  background-color: #007bff !important; }
+  background-color: #FBFF2F !important; }
 
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
 button.bg-primary:focus {
-  background-color: #0062cc !important; }
+  background-color: #f6fb00 !important; }
 
 .bg-secondary {
   background-color: #6c757d !important; }
@@ -1125,12 +1125,12 @@ button.bg-info:focus {
   background-color: #117a8b !important; }
 
 .bg-warning {
-  background-color: #ffc107 !important; }
+  background-color: #FBFF2F !important; }
 
 a.bg-warning:hover, a.bg-warning:focus,
 button.bg-warning:hover,
 button.bg-warning:focus {
-  background-color: #d39e00 !important; }
+  background-color: #f6fb00 !important; }
 
 .bg-danger {
   background-color: #dc3545 !important; }
@@ -1193,7 +1193,7 @@ button.bg-dark:focus {
   border-left: 0 !important; }
 
 .border-primary {
-  border-color: #007bff !important; }
+  border-color: #FBFF2F !important; }
 
 .border-secondary {
   border-color: #6c757d !important; }
@@ -1205,7 +1205,7 @@ button.bg-dark:focus {
   border-color: #17a2b8 !important; }
 
 .border-warning {
-  border-color: #ffc107 !important; }
+  border-color: #FBFF2F !important; }
 
 .border-danger {
   border-color: #dc3545 !important; }
@@ -3429,10 +3429,10 @@ button.bg-dark:focus {
   color: #fff !important; }
 
 .text-primary {
-  color: #007bff !important; }
+  color: #FBFF2F !important; }
 
 a.text-primary:hover, a.text-primary:focus {
-  color: #0056b3 !important; }
+  color: #dde200 !important; }
 
 .text-secondary {
   color: #6c757d !important; }
@@ -3453,10 +3453,10 @@ a.text-info:hover, a.text-info:focus {
   color: #0f6674 !important; }
 
 .text-warning {
-  color: #ffc107 !important; }
+  color: #FBFF2F !important; }
 
 a.text-warning:hover, a.text-warning:focus {
-  color: #ba8b00 !important; }
+  color: #dde200 !important; }
 
 .text-danger {
   color: #dc3545 !important; }
@@ -3743,6 +3743,38 @@ body {
 
 a:hover {
   color: #17a2b8; }
+
+.wg-Header {
+  padding: 30px 0;
+  height: 145px; }
+  .wg-Header .container {
+    position: relative; }
+  .wg-Header__Logo {
+    max-width: 100px;
+    margin: 0 auto; }
+
+.wg-OpenMenuButton {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  border: 0;
+  background: none;
+  width: 40px;
+  padding: 16px 0;
+  transition: background 0.3s; }
+  .wg-OpenMenuButton:hover::after, .wg-OpenMenuButton:hover::before {
+    background: #FBFF2F; }
+  .wg-OpenMenuButton::after, .wg-OpenMenuButton::before {
+    content: "";
+    display: block;
+    background: #fff;
+    height: 2px; }
+  .wg-OpenMenuButton::before {
+    margin-bottom: 4px; }
+  .wg-OpenMenuButton::after {
+    width: 80%;
+    margin-left: auto; }
 
 body::after {
   position: fixed;

@@ -1,0 +1,49 @@
+.wg-Header {
+  padding: 30px 0;
+  height: 145px;
+
+  .container {
+    position: relative;
+  }
+
+  &__Logo {
+    max-width: 100px;
+    margin: 0 auto;
+  }
+}
+
+.wg-OpenMenuButton {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  border: 0;
+  background: none;
+  width: 40px;
+  padding: 16px 0;
+  transition: background 0.3s;
+
+  &:hover {
+    &::after,
+    &::before {
+      background: $primary;
+    }
+  }
+
+  &::after,
+  &::before {
+    content: "";
+    display: block;
+    background: $white;
+    height: 2px;
+  }
+
+  &::before {
+    margin-bottom: 4px;
+  }
+
+  &::after {
+    width: 80%;
+    margin-left: auto;
+  }
+}
