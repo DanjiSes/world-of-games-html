@@ -1,14 +1,31 @@
 <main>
-  <div class="container text-center">
-    {# Date #}
-    <div class="wg-DateStart mb-4">26 августа</div>
-    {# Title #}
-    <h1 class="h1">Шоу саундтреков из популярных видеоигр</h1>
-    {# Desc #}
-    <p>К-к-к-комбо визуальных эффектов, светового шоу и мощного звука</p>
-    {# Buy #}
-    <button class="wg-Btn mt-4">
+  {# First screen #}
+  <div class="vh-100 d-flex align-items-center">
+    <div class="container text-center">
+      {# Date #}
+      <div class="wg-DateStart my-4">26 августа</div>
+      {# Title #}
+      <h1 class="h1">Шоу саундтреков из популярных видеоигр</h1>
+      {# Desc #}
+      <p>К-к-к-комбо визуальных эффектов, светового шоу и мощного звука</p>
+      {# Buy #}
+      <button class="wg-Btn mt-4">
       Купить билеты
     </button>
+    </div>
+  </div>
+  {# Second screen #}
+  <div class="container text-center py-5">
+    <h2 class="h1">При поддержке</h2>
+    {# Sponsors #}
+    <div class="d-flex flex-wrap justify-content-center align-items-center">
+      {% for i in range(0, 7) %}
+        <div style="width: 55px" class="m-2">
+          <a href="#" target="_blank">
+            <img src="https://picsum.photos/200/200" alt="" class="w-100"/>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
   </div>
 </main>
