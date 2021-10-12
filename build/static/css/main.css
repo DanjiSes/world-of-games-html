@@ -12,18 +12,18 @@
   --pink: #e83e8c;
   --red: #dc3545;
   --orange: #fd7e14;
-  --yellow: #FBFF2F;
+  --yellow: #fbff2f;
   --green: #28a745;
   --teal: #20c997;
   --cyan: #17a2b8;
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #FBFF2F;
+  --primary: #fbff2f;
   --secondary: #6c757d;
   --success: #28a745;
   --info: #17a2b8;
-  --warning: #FBFF2F;
+  --warning: #fbff2f;
   --danger: #dc3545;
   --light: #f8f9fa;
   --dark: #343a40;
@@ -131,7 +131,7 @@ sup {
   top: -.5em; }
 
 a {
-  color: #FBFF2F;
+  color: #fbff2f;
   text-decoration: none;
   background-color: transparent; }
   a:hover {
@@ -1093,7 +1093,7 @@ mark,
   vertical-align: text-top !important; }
 
 .bg-primary {
-  background-color: #FBFF2F !important; }
+  background-color: #fbff2f !important; }
 
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
@@ -1125,7 +1125,7 @@ button.bg-info:focus {
   background-color: #117a8b !important; }
 
 .bg-warning {
-  background-color: #FBFF2F !important; }
+  background-color: #fbff2f !important; }
 
 a.bg-warning:hover, a.bg-warning:focus,
 button.bg-warning:hover,
@@ -1193,7 +1193,7 @@ button.bg-dark:focus {
   border-left: 0 !important; }
 
 .border-primary {
-  border-color: #FBFF2F !important; }
+  border-color: #fbff2f !important; }
 
 .border-secondary {
   border-color: #6c757d !important; }
@@ -1205,7 +1205,7 @@ button.bg-dark:focus {
   border-color: #17a2b8 !important; }
 
 .border-warning {
-  border-color: #FBFF2F !important; }
+  border-color: #fbff2f !important; }
 
 .border-danger {
   border-color: #dc3545 !important; }
@@ -3429,7 +3429,7 @@ button.bg-dark:focus {
   color: #fff !important; }
 
 .text-primary {
-  color: #FBFF2F !important; }
+  color: #fbff2f !important; }
 
 a.text-primary:hover, a.text-primary:focus {
   color: #dde200 !important; }
@@ -3453,7 +3453,7 @@ a.text-info:hover, a.text-info:focus {
   color: #0f6674 !important; }
 
 .text-warning {
-  color: #FBFF2F !important; }
+  color: #fbff2f !important; }
 
 a.text-warning:hover, a.text-warning:focus {
   color: #dde200 !important; }
@@ -3731,10 +3731,11 @@ a {
 html {
   font-size: 100%; }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; }
 
 body {
   background: #000;
@@ -3764,7 +3765,7 @@ a:hover {
   padding: 16px 0;
   transition: background 0.3s; }
   .wg-OpenMenuButton:hover::after, .wg-OpenMenuButton:hover::before {
-    background: #FBFF2F; }
+    background: #fbff2f; }
   .wg-OpenMenuButton::after, .wg-OpenMenuButton::before {
     content: "";
     display: block;
