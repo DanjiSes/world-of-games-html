@@ -32,5 +32,27 @@
       <h2 class="h1">Сеансы</h2>
     </div>
 
+    {% for i in range(0, 3) %}
+
+      {# Session #}
+      <div class="mt-4">
+        {# Time #}
+        <div>
+          <div class="text-info">18:00</div>
+          <div class="text-secondary">26.08.21</div>
+        </div>
+        {# Place #}
+        <div class="mt-2 mb-3">
+          <div>Дом Кино, Vegas City Hall</div>
+          <div class="fw-light">билеты от <span class="text-primary fw-bold">1000 рублей</span></div>
+        </div>
+        {# Buy #}
+        <button class="wg-Btn">
+          Купить билеты
+        </button>
+      </div>
+
+    {% endfor %}
+
   </div>
 </section>
