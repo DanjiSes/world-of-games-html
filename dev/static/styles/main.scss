@@ -19,7 +19,8 @@ body {
 }
 
 body {
-  background: $black;
+  background: url("../images/bg-pattern.png") $black;
+  background-size: contain;
   color: $white;
   overflow: hidden auto;
 }
