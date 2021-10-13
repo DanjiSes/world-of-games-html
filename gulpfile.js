@@ -9,8 +9,7 @@ const merge = require("merge-stream");
 // Nunjucks compiler
 const nunjucks = require("gulp-nunjucks");
 // Sass | SCSS compiler
-const sass = require("gulp-sass");
-sass.compiler = require("node-sass");
+const sass = require("gulp-sass")(require("sass"));
 // Server Browsersync
 const browserSync = require("browser-sync").create();
 // HELPERS
