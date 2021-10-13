@@ -3871,7 +3871,8 @@ a:hover {
 
 .wg-Header {
   padding: 30px 0;
-  height: 145px; }
+  height: 145px;
+  z-index: 999; }
   .wg-Header .container {
     position: relative; }
   .wg-Header__Logo {

@@ -22,9 +22,11 @@
       {# Desc #}
       <p>К-к-к-комбо визуальных эффектов, светового шоу и мощного звука</p>
       {# Buy #}
-      <button class="wg-Btn mt-4">
-        Купить билеты
-      </button>
+      <div class="glitch-button mt-4">
+        <button class="wg-Btn">
+          Купить билеты
+        </button>
+      </div>
     </div>
   </div>
   {# Second screen #}
@@ -33,7 +35,7 @@
     {# Sponsors #}
     <div class="d-flex flex-wrap justify-content-center align-items-center">
       {% for i in range(0, 7) %}
-        <div style="width: 55px" class="m-2">
+        <div style="max-width: 60px" class="m-2">
           <a href="#" target="_blank">
             <img src="https://picsum.photos/200/200" alt="" class="w-100"/>
           </a>
