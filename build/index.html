@@ -57,7 +57,20 @@
       </header>
 
       <main>
-        <div class="vh-100 d-flex align-items-center">
+        <div class="vh-100 d-flex align-items-center position-relative">
+          <img
+            class="position-absolute"
+            style="
+              left: -46%;
+              top: 28%;
+              width: 100%;
+              z-index: -1;
+              transform: rotate(28deg);
+            "
+            src="static/images/sphere.png"
+            alt=""
+          />
+
           <div class="container text-center">
             <div class="wg-DateStart wg-corners my-4">26 августа</div>
 
@@ -182,7 +195,7 @@
 
           <div class="py-3"></div>
 
-          <p class="wg-corners text-center px-3 mt-5">
+          <p class="wg-corners text-center px-3 mt-5 py-2">
             Купите билеты со скидкой 10% до 26 августа по промокоду:
             <b class="text-info">games</b>
           </p>
