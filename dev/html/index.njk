@@ -9,6 +9,14 @@
 {% block content %}
   {% include "blocks/first.njk" %}
   {% include "blocks/about.njk" %}
+  {% include "blocks/sounds.njk" %}
 {% endblock %}
 
-{% block scripts %}{% endblock %}
+{% block scripts %}
+  <script>
+    // Слайдер свиедоиграми
+    $(function () {
+      $('.js-albums-slider').slick({infinite: false});
+    });
+  </script>
+{% endblock %}

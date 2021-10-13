@@ -1,0 +1,28 @@
+<section class="py-5">
+  <div class="container text-center">
+    <h2 class="h1">Саундтреки</h2>
+    <p class="mb-5">На шоу вы услышите саундтреки из популярных видеоигр</p>
+
+    <div class="js-albums-slider">
+      {% for i in range(0, 4) %}
+        <div>
+          <div class="js-albums-slider__slide">
+
+            {% for a in range(0, 4) %}
+
+              <div class="wg-Album">
+                <div class="wg-Album__preview">
+                  <img src="static/images/albums/01.png" alt="HALF-LIFE 2">
+                </div>
+                <strong class="wg-Album__name">HALF-LIFE {{i+a}}</strong>
+              </div>
+
+            {% endfor %}
+
+          </div>
+        </div>
+
+      {% endfor %}
+    </div>
+  </div>
+</section>
