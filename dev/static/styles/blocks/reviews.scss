@@ -1,4 +1,28 @@
-.swiper {
-  width: 600px;
-  height: 300px;
+.wg-ReviewsSlider {
+  width: 90%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: visible;
+}
+
+.wg-Review {
+  background: $primary;
+  padding-bottom: rem(13px);
+  padding-right: rem(1px);
+  clip-path: polygon(
+    0% 0%,
+    0% 100%,
+    26% 100%,
+    29% 98%,
+    55% 98%,
+    57% 100%,
+    94% 100%,
+    100% 92%,
+    100% 0
+  );
+
+  &__inner {
+    clip-path: polygon(0 0, 0 100%, 95% 100%, 95% 88%, 99% 88%, 99% 0);
+  }
 }

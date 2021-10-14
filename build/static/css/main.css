@@ -7206,6 +7206,43 @@ a {
   transform: rotate(180deg);
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 40%;
+  z-index: 19;
+}
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+  opacity: 0.5;
+}
+.swiper-button-prev button,
+.swiper-button-next button {
+  width: auto;
+  height: auto;
+  background: none;
+  border: none;
+}
+.swiper-button-prev button::before,
+.swiper-button-next button::before {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='22' viewBox='0 0 16 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 18.8627L10 11.2957L0 3.7287L2 0.701904L16 11.2957L2 21.8895L0 18.8627Z' fill='white'/%3E%3C/svg%3E%0A");
+  width: 0.9375rem;
+  height: 0.9375rem;
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.swiper-button-prev {
+  left: -1.5625rem;
+  transform: rotate(180deg);
+}
+
+.swiper-button-next {
+  right: -1.5625rem;
+}
+
 .p-container {
   width: 100%;
   padding-right: var(--bs-gutter-x, 0.75rem);
@@ -7468,7 +7505,20 @@ a:hover {
   margin-bottom: 10%;
 }
 
-.swiper {
-  width: 600px;
-  height: 300px;
+.wg-ReviewsSlider {
+  width: 90%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: visible;
+}
+
+.wg-Review {
+  background: #fbff2f;
+  padding-bottom: 0.8125rem;
+  padding-right: 0.0625rem;
+  clip-path: polygon(0% 0%, 0% 100%, 26% 100%, 29% 98%, 55% 98%, 57% 100%, 94% 100%, 100% 92%, 100% 0);
+}
+.wg-Review__inner {
+  clip-path: polygon(0 0, 0 100%, 95% 100%, 95% 88%, 99% 88%, 99% 0);
 }

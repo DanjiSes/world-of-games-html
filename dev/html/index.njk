@@ -21,24 +21,24 @@
     });
     // Слайдер отзывов
     const swiper = new Swiper('.swiper', {
-      // Optional parameters
-      direction: 'vertical',
-      loop: true,
+      effect: "cards",
+      grabCursor: true,
 
-      // If we need pagination
-      pagination: {
-        el: '.swiper-pagination'
-      },
+      // effect: "creative",
+      // creativeEffect: {
+      //  prev: {
+      //    shadow: true,
+      //    translate: [0, 0, -400]
+      //  },
+      //  next: {
+      //    translate: ["100%", 0, 0]
+      //  }
+      //},
 
       // Navigation arrows
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
-      },
-
-      // And if we need scrollbar
-      scrollbar: {
-        el: '.swiper-scrollbar'
       }
     });
   </script>
