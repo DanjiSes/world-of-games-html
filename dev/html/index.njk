@@ -10,6 +10,7 @@
   {% include "blocks/first.njk" %}
   {% include "blocks/about.njk" %}
   {% include "blocks/sounds.njk" %}
+  {% include "blocks/reviews.njk" %}
 {% endblock %}
 
 {% block scripts %}
@@ -17,6 +18,28 @@
     // Слайдер свиедоиграми
     $(function () {
       $('.js-albums-slider').slick({infinite: false});
+    });
+    // Слайдер отзывов
+    const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      direction: 'vertical',
+      loop: true,
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination'
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+
+      // And if we need scrollbar
+      scrollbar: {
+        el: '.swiper-scrollbar'
+      }
     });
   </script>
 {% endblock %}

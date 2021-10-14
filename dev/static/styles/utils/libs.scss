@@ -58,6 +58,15 @@
 
 @import "../../../../node_modules/slick-carousel/slick/slick.scss";
 @import "../../../../node_modules/slick-carousel/slick/slick-theme.scss";
+
+/**
+* Swiper slider
+*/
+
+@import "../../../../node_modules/swiper/swiper.scss";
+
+// Customization
+
 .slick-slide {
   outline: none;
 }
