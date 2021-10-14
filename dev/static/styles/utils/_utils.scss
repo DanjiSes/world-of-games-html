@@ -54,6 +54,9 @@ $clip: polygon(0 0, 68% 0, 71% 7%, 95% 8%, 100% 30%, 100% 100%, 5% 100%, 0 76%);
   border: none;
   position: relative;
   background: none;
+  color: $black !important;
+  text-decoration: none;
+  display: inline-block;
 
   &::before,
   &::after {

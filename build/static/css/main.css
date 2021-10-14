@@ -7293,6 +7293,9 @@ a {
   border: none;
   position: relative;
   background: none;
+  color: #000 !important;
+  text-decoration: none;
+  display: inline-block;
 }
 .wg-Btn::before, .wg-Btn::after {
   content: "";
