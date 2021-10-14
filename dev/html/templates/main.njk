@@ -1,62 +1,62 @@
 <!DOCTYPE html>
 <html lang="{{ lang | default('ru') }}">
-	<head>
-		<meta charset="UTF-8">
-		<link rel="icon" href="static/favicon.ico">
-		<title>{{ title | default('Nunjucks template') }}</title>
-		<meta name="description" content="{{ description | default('') }}">
-		<!--[if IE]>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="lpFiles/wog/favicon.ico">
+    <title>{{ title | default('Nunjucks template') }}</title>
+    <meta name="description" content="{{ description | default('') }}">
+    <!--[if IE]>
 	<meta http-equiv='X-UA-Compatible' content="IE = edge">
 	<![endif]-->
-		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<link rel="stylesheet" href="static/fonts/fonts.css">
-		<link rel="stylesheet" href="static/css/main.css" type="text/css">
-		<!--[if lt IE 9]>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="lpFiles/wog/fonts/fonts.css">
+    <link rel="stylesheet" href="lpFiles/wog/css/main.css" type="text/css">
+    <!--[if lt IE 9]>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
 	<![endif]-->
-	</head>
-	<body class="{{ bodyClass | default('')}}">
-		{# For SEO #}
-		<script type="application/ld+json">
-			{
-				"@context": "https://schema.org",
-				"@type": "Event",
-				"name": "Шоу саундтреков из популярных видеоигр",
-				"location": {
-					"@type": "Place",
-					"address": {
-						"@type": "PostalAddress",
-						"addressLocality": "ул. Караванная, д. 12. (м. Невский проспект)",
-						"addressRegion": "Санкт-Питербург"
-					},
-					"url": "// TODO: Вставить сюда ссылку на адрес 2гис например или гугл карты (они лучше думаю в поиске будут ранжироваться)"
-				},
-				"offers": {
-					"@type": "AggregateOffer",
-					"lowPrice": "1000₽",
-					"offerCount": "587"
-				},
-				"startDate": "2016-04-21T20:00", // Вставить сюда дату проведения мироприятия
-				"url": "/ TODO: Вставить сюда ссылку на страницу мироприятия"
-			}
-		</script>
+  </head>
+  <body class="{{ bodyClass | default('')}}">
+    {# For SEO #}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "Шоу саундтреков из популярных видеоигр",
+        "location": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "ул. Караванная, д. 12. (м. Невский проспект)",
+            "addressRegion": "Санкт-Питербург"
+          },
+          "url": "// TODO: Вставить сюда ссылку на адрес 2гис например или гугл карты (они лучше думаю в поиске будут ранжироваться)"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "lowPrice": "1000₽",
+          "offerCount": "587"
+        },
+        "startDate": "2016-04-21T20:00", // Вставить сюда дату проведения мироприятия
+        "url": "/ TODO: Вставить сюда ссылку на страницу мироприятия"
+      }
+    </script>
 
-		<div class="wrapper">
+    <div class="wrapper">
 
-			{% include "blocks/header.njk" %}
+      {% include "blocks/header.njk" %}
 
-			{% block content %}
-				<p>Page content is empty</p>
-			{% endblock %}
+      {% block content %}
+        <p>Page content is empty</p>
+      {% endblock %}
 
-			{% include "blocks/footer.njk" %}
+      {% include "blocks/footer.njk" %}
 
-		</div>
+    </div>
 
-		<script src="static/js/libs.min.js"></script>
-		<script src="static/js/main.js"></script>
+    <script src="lpFiles/wog/js/libs.min.js"></script>
+    <script src="lpFiles/wog/js/main.js"></script>
 
-		{% block scripts %}{% endblock %}
+    {% block scripts %}{% endblock %}
 
-	</body>
+  </body>
 </html>

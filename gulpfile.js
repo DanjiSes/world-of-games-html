@@ -53,15 +53,15 @@ function htmlMin() {
 function css() {
   return src("dev/static/styles/main.scss")
     .pipe(sass())
-    .pipe(dest(buildPath + "/static/css"))
+    .pipe(dest(buildPath + "/lpFiles/wog/css"))
     .pipe(browserSync.stream());
 }
 
 function cssMin() {
-  return src("dev/static/styles/main.scss")
+  return src("dev/lpFiles/wog/styles/main.scss")
     .pipe(sass())
     .pipe(cleanCSS({ compatibility: "ie8" }))
-    .pipe(dest(buildPath + "/static/css"))
+    .pipe(dest(buildPath + "/lpFiles/wog/css"))
     .pipe(browserSync.stream());
 }
 
@@ -82,12 +82,12 @@ function jsLibs(cb) {
 
   return src(libs)
     .pipe(concat("libs.min.js"))
-    .pipe(dest(buildPath + "/static/js"));
+    .pipe(dest(buildPath + "/lpFiles/wog/js"));
 }
 
 function js() {
   return src("dev/static/js/*")
-    .pipe(dest(buildPath + "/static/js"))
+    .pipe(dest(buildPath + "/lpFiles/wog/js"))
     .on("end", browserSync.reload);
 }
 
@@ -96,7 +96,9 @@ function js() {
 // ------------------------------------------
 
 function images() {
-  return src("dev/static/images/**/*").pipe(dest(buildPath + "/static/images"));
+  return src("dev/static/images/**/*").pipe(
+    dest(buildPath + "/lpFiles/wog/images")
+  );
 }
 
 // ------------------------------------------
@@ -104,11 +106,11 @@ function images() {
 // ------------------------------------------
 
 function assets() {
-  return src("dev/static/assets/**/*").pipe(dest(buildPath + "/static"));
+  return src("dev/static/assets/**/*").pipe(dest(buildPath + "/lpFiles/wog"));
 }
 
 function copy(from, to = "") {
-  return src(from).pipe(dest(buildPath + "/static/" + to));
+  return src(from).pipe(dest(buildPath + "/lpFiles/wog/" + to));
 }
 
 function copyFiles(cb) {
@@ -124,7 +126,7 @@ function copyFiles(cb) {
 // ------------------------------------------
 
 function fonts() {
-  return src("dev/static/fonts/*").pipe(dest(buildPath + "/static/fonts"));
+  return src("dev/static/fonts/*").pipe(dest(buildPath + "/lpFiles/wog/fonts"));
 }
 
 // ------------------------------------------
@@ -147,20 +149,20 @@ function watchFiles() {
   // html
   watch("dev/html/**/*", series(html));
   // styles
-  watch("dev/static/styles/**/*", series(css));
+  watch("dev/lpFiles/wog/styles/**/*", series(css));
   // images
-  watch("dev/static/images/**/*.{png,jpg,gif,svg}", series(images));
+  watch("dev/lpFiles/wog/images/**/*.{png,jpg,gif,svg}", series(images));
   // js
-  watch("dev/static/js/**/*", series(js));
+  watch("dev/lpFiles/wog/js/**/*", series(js));
 }
 
 function watchStaticFiles() {
   // styles
-  watch("dev/static/styles/**/*", series(css));
+  watch("dev/lpFiles/wog/styles/**/*", series(css));
   // images
-  watch("dev/static/images/**/*.{png,jpg,gif,svg}", series(images));
+  watch("dev/lpFiles/wog/images/**/*.{png,jpg,gif,svg}", series(images));
   // js
-  watch("dev/static/js/**/*", series(js));
+  watch("dev/lpFiles/wog/js/**/*", series(js));
 }
 
 // clean build folder
