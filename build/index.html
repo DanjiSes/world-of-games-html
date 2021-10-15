@@ -82,7 +82,7 @@
               <div>
                 <a
                   href="tel:+7 (925) 726-40-05"
-                  class="d-block wg-corners px-3 py-2"
+                  class="d-block wg-corners px-3 py-2 wg-corners-hover"
                   >+7 (925) 726-40-05</a
                 >
               </div>
@@ -91,31 +91,34 @@
         </div>
       </header>
 
-      <main>
+      <main class="overflow-hidden">
         <div
           class="d-flex align-items-center position-relative"
           style="padding-top: 145px"
         >
           <img
-            class="position-absolute"
-            style="
-              left: -46%;
-              top: 28%;
-              width: 100%;
-              z-index: -1;
-              transform: rotate(28deg);
-            "
+            class="wg-first-decor-lines d-sm-none"
+            src="lpFiles/wog/images/decor-lines.svg"
+            alt=""
+          />
+          <img
+            class="wg-first-decor"
             src="lpFiles/wog/images/sphere.png"
             alt=""
           />
 
-          <div class="container text-center">
+          <div class="container text-center text-sm-start pt-sm-5">
             <div class="wg-DateStart wg-corners my-4">26 августа</div>
 
-            <h1 class="h1">Шоу саундтреков из популярных видеоигр</h1>
+            <h1 class="h1">
+              Шоу саундтреков <br class="d-none d-sm-block" />
+              из популярных видеоигр
+            </h1>
 
             <p>
-              К-к-к-комбо визуальных эффектов, светового шоу и мощного звука
+              К-к-к-комбо визуальных эффектов, светового шоу
+              <br class="d-none d-sm-block" />
+              и мощного звука
             </p>
 
             <div class="glitch-button mt-4">
@@ -123,53 +126,94 @@
             </div>
           </div>
         </div>
+        <div class="py-sm-5"></div>
 
         <div class="container text-center py-5">
-          <h2 class="h1 mb-3">При поддержке</h2>
+          <h2 class="h1 mb-4">При поддержке</h2>
 
-          <div
-            class="d-flex flex-wrap justify-content-center align-items-center"
-          >
-            <div style="max-width: 60px" class="m-2">
-              <a href="#" target="_blank">
-                <img src="https://picsum.photos/200/200" alt="" class="w-100" />
-              </a>
+          <div class="js-sponsors-slider">
+            <div>
+              <div class="mx-3">
+                <a href="#" target="_blank">
+                  <img
+                    src="https://picsum.photos/200/200"
+                    alt=""
+                    class="w-100"
+                  />
+                </a>
+              </div>
             </div>
 
-            <div style="max-width: 60px" class="m-2">
-              <a href="#" target="_blank">
-                <img src="https://picsum.photos/200/200" alt="" class="w-100" />
-              </a>
+            <div>
+              <div class="mx-3">
+                <a href="#" target="_blank">
+                  <img
+                    src="https://picsum.photos/200/200"
+                    alt=""
+                    class="w-100"
+                  />
+                </a>
+              </div>
             </div>
 
-            <div style="max-width: 60px" class="m-2">
-              <a href="#" target="_blank">
-                <img src="https://picsum.photos/200/200" alt="" class="w-100" />
-              </a>
+            <div>
+              <div class="mx-3">
+                <a href="#" target="_blank">
+                  <img
+                    src="https://picsum.photos/200/200"
+                    alt=""
+                    class="w-100"
+                  />
+                </a>
+              </div>
             </div>
 
-            <div style="max-width: 60px" class="m-2">
-              <a href="#" target="_blank">
-                <img src="https://picsum.photos/200/200" alt="" class="w-100" />
-              </a>
+            <div>
+              <div class="mx-3">
+                <a href="#" target="_blank">
+                  <img
+                    src="https://picsum.photos/200/200"
+                    alt=""
+                    class="w-100"
+                  />
+                </a>
+              </div>
             </div>
 
-            <div style="max-width: 60px" class="m-2">
-              <a href="#" target="_blank">
-                <img src="https://picsum.photos/200/200" alt="" class="w-100" />
-              </a>
+            <div>
+              <div class="mx-3">
+                <a href="#" target="_blank">
+                  <img
+                    src="https://picsum.photos/200/200"
+                    alt=""
+                    class="w-100"
+                  />
+                </a>
+              </div>
             </div>
 
-            <div style="max-width: 60px" class="m-2">
-              <a href="#" target="_blank">
-                <img src="https://picsum.photos/200/200" alt="" class="w-100" />
-              </a>
+            <div>
+              <div class="mx-3">
+                <a href="#" target="_blank">
+                  <img
+                    src="https://picsum.photos/200/200"
+                    alt=""
+                    class="w-100"
+                  />
+                </a>
+              </div>
             </div>
 
-            <div style="max-width: 60px" class="m-2">
-              <a href="#" target="_blank">
-                <img src="https://picsum.photos/200/200" alt="" class="w-100" />
-              </a>
+            <div>
+              <div class="mx-3">
+                <a href="#" target="_blank">
+                  <img
+                    src="https://picsum.photos/200/200"
+                    alt=""
+                    class="w-100"
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -1016,10 +1060,20 @@
     <script src="lpFiles/wog/js/main.js"></script>
 
     <script>
+      // Слайдер sponsors
+      $(function () {
+        $(".js-sponsors-slider").slick({
+          infinite: true,
+          slidesToShow: 5,
+          autoplay: true,
+        });
+      });
+
       // Слайдер свиедоиграми
       $(function () {
         $(".js-albums-slider").slick({ infinite: true });
       });
+
       // Слайдер отзывов
       const swiper = new Swiper(".swiper", {
         effect: "cards",

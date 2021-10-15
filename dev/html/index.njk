@@ -16,10 +16,16 @@
 
 {% block scripts %}
   <script>
+    // Слайдер sponsors
+    $(function () {
+      $('.js-sponsors-slider').slick({infinite: true, slidesToShow: 5, autoplay: true});
+    });
+
     // Слайдер свиедоиграми
     $(function () {
       $('.js-albums-slider').slick({infinite: true});
     });
+
     // Слайдер отзывов
     const swiper = new Swiper('.swiper', {
       effect: "cards",

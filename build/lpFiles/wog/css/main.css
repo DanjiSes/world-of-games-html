@@ -7291,6 +7291,29 @@ a {
   clip-path: polygon(0 0.75rem, 0 0, 0.75rem 0, 0.75rem 2px, calc(100% - 0.75rem) 2px, calc(100% - 0.75rem) 0, 100% 0, 100% 0.75rem, calc(100% - 2px - 1px) 0.75rem, calc(100% - 2px - 1px) calc(100% - 0.75rem), 100% calc(100% - 0.75rem), 100% 100%, calc(100% - 0.75rem) 100%, calc(100% - 0.75rem) calc(100% - 2px - 1px), 0.75rem calc(100% - 2px - 1px), 0.75rem 100%, 0 100%, 0 calc(100% - 0.75rem), 2px calc(100% - 0.75rem), 2px 0.75rem);
 }
 
+.wg-corners-hover {
+  position: relative;
+}
+.wg-corners-hover:hover {
+  color: #fbff2f;
+}
+.wg-corners-hover:hover::after {
+  opacity: 1;
+}
+.wg-corners-hover::after {
+  border: 1px solid #fbff2f;
+  clip-path: polygon(0 0.5rem, 0 0, 0.5rem 0, 0.5rem 2px, calc(100% - 0.5rem) 2px, calc(100% - 0.5rem) 0, 100% 0, 100% 0.5rem, calc(100% - 2px - 1px) 0.5rem, calc(100% - 2px - 1px) calc(100% - 0.5rem), 100% calc(100% - 0.5rem), 100% 100%, calc(100% - 0.5rem) 100%, calc(100% - 0.5rem) calc(100% - 2px - 1px), 0.5rem calc(100% - 2px - 1px), 0.5rem 100%, 0 100%, 0 calc(100% - 0.5rem), 2px calc(100% - 0.5rem), 2px 0.5rem);
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
 .wg-Btn {
   cursor: pointer;
   padding: 0.625rem 2.5rem;
@@ -7535,6 +7558,29 @@ a:hover {
   display: inline-block;
 }
 
+.wg-first-decor {
+  position: absolute;
+  left: -46%;
+  top: 28%;
+  width: 100%;
+  z-index: -1;
+  transform: rotate(28deg);
+}
+
+.wg-first-decor-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 85%;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.js-sponsors-slider .slick-track {
+  display: flex;
+  align-items: center;
+}
+
 .wg-Album__preview {
   position: relative;
   margin-bottom: 0.625rem;
@@ -7633,9 +7679,18 @@ a:hover {
   opacity: 0;
 }
 
+@media (min-width: 576px) {
+  .wg-first-decor {
+    width: 60%;
+    left: inherit;
+    right: -10%;
+    top: calc(50% + 100px);
+    transform: translateY(-50%);
+  }
+}
 @media (min-width: 992px) {
   html {
-    font-size: 16px;
+    font-size: 17px;
   }
 
   .wg-Header .container {
@@ -7675,5 +7730,15 @@ a:hover {
     margin-bottom: 0;
     margin-left: 1rem;
     margin-right: 1rem;
+  }
+}
+@media (min-width: 1400px) {
+  html {
+    font-size: 22px;
+  }
+
+  .wg-first-decor {
+    width: 50%;
+    right: 0;
   }
 }

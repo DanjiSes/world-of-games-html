@@ -4,3 +4,45 @@
   font-size: rem(18px);
   display: inline-block;
 }
+
+.wg-first-decor {
+  position: absolute;
+  left: -46%;
+  top: 28%;
+  width: 100%;
+  z-index: -1;
+  transform: rotate(28deg);
+}
+
+.wg-first-decor-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 85%;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.js-sponsors-slider {
+  .slick-track {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@mixin first--sm() {
+  .wg-first-decor {
+    width: 60%;
+    left: inherit;
+    right: -10%;
+    top: calc(50% + 100px);
+    transform: translateY(-50%);
+  }
+}
+
+@mixin first--xxl() {
+  .wg-first-decor {
+    width: 50%;
+    right: 0;
+  }
+}

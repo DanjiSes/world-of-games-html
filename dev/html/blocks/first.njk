@@ -1,26 +1,17 @@
-<main>
+<main class="overflow-hidden">
   {# First screen #}
   <div class="d-flex align-items-center position-relative" style="padding-top: 145px;">
-    <img
-      class="position-absolute"
-      style="
-        left: -46%;
-        top: 28%;
-        width: 100%;
-        z-index: -1;
-        transform: rotate(28deg);
-      "
-      src="lpFiles/wog/images/sphere.png"
-      alt=""
-    >
+    {# Decor #}
+    <img class="wg-first-decor-lines d-sm-none" src="lpFiles/wog/images/decor-lines.svg" alt="">
+    <img class="wg-first-decor" src="lpFiles/wog/images/sphere.png" alt="">
 
-    <div class="container text-center">
+    <div class="container text-center text-sm-start pt-sm-5">
       {# Date #}
       <div class="wg-DateStart wg-corners my-4">26 августа</div>
       {# Title #}
-      <h1 class="h1">Шоу саундтреков из популярных видеоигр</h1>
+      <h1 class="h1">Шоу саундтреков <br class="d-none d-sm-block"/> из популярных видеоигр</h1>
       {# Desc #}
-      <p>К-к-к-комбо визуальных эффектов, светового шоу и мощного звука</p>
+      <p>К-к-к-комбо визуальных эффектов, светового шоу <br class="d-none d-sm-block"/> и мощного звука</p>
       {# Buy #}
       <div class="glitch-button mt-4">
         <a href="#sessions" class="wg-Btn">
@@ -29,16 +20,19 @@
       </div>
     </div>
   </div>
+  <div class="py-sm-5"></div>
   {# Second screen #}
   <div class="container text-center py-5">
-    <h2 class="h1 mb-3">При поддержке</h2>
+    <h2 class="h1 mb-4">При поддержке</h2>
     {# Sponsors #}
-    <div class="d-flex flex-wrap justify-content-center align-items-center">
+    <div class="js-sponsors-slider">
       {% for i in range(0, 7) %}
-        <div style="max-width: 60px" class="m-2">
-          <a href="#" target="_blank">
-            <img src="https://picsum.photos/200/200" alt="" class="w-100"/>
-          </a>
+        <div>
+          <div class="mx-3">
+            <a href="#" target="_blank">
+              <img src="https://picsum.photos/200/200" alt="" class="w-100"/>
+            </a>
+          </div>
         </div>
       {% endfor %}
     </div>

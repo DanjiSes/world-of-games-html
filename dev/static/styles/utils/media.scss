@@ -1,8 +1,25 @@
+@include media-breakpoint-up("sm") {
+  @include first--sm();
+}
+
+@include media-breakpoint-up("md") {
+}
+
 @include media-breakpoint-up("lg") {
   html {
-    font-size: 16px;
+    font-size: 17px;
   }
 
-  // Includes
   @include header--lg();
+}
+
+@include media-breakpoint-up("xl") {
+}
+
+@include media-breakpoint-up("xxl") {
+  html {
+    font-size: 22px;
+  }
+
+  @include first--xxl();
 }
