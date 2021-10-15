@@ -18,12 +18,13 @@
   <script>
     // Слайдер свиедоиграми
     $(function () {
-      $('.js-albums-slider').slick({infinite: false});
+      $('.js-albums-slider').slick({infinite: true});
     });
     // Слайдер отзывов
     const swiper = new Swiper('.swiper', {
       effect: "cards",
       grabCursor: true,
+      loop: true,
 
       // effect: "creative",
       // creativeEffect: {
