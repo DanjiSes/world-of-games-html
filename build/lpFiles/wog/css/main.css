@@ -7738,6 +7738,11 @@ a:hover {
     margin-left: 1rem;
     margin-right: 1rem;
   }
+
+  .js-albums-slider__slide > .wg-Album {
+    width: 20%;
+    margin-bottom: 0%;
+  }
 }
 @media (min-width: 1400px) {
   html {
