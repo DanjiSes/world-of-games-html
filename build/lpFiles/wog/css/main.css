@@ -7580,6 +7580,13 @@ a:hover {
   display: flex;
   align-items: center;
 }
+.js-sponsors-slider img {
+  filter: grayscale(1);
+  transition: all 0.5s;
+}
+.js-sponsors-slider img:hover {
+  filter: grayscale(0);
+}
 
 .wg-Album__preview {
   position: relative;

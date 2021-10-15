@@ -28,6 +28,16 @@
     display: flex;
     align-items: center;
   }
+
+  img {
+    filter: grayscale(1);
+
+    transition: all 0.5s;
+
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
 }
 
 @mixin first--sm() {
