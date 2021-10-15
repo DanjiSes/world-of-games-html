@@ -43,6 +43,10 @@
   @include corners(rem(12px) 1px solid $info);
 }
 
+.wg-corners-primary {
+  @include corners(rem(12px) 1px solid $primary);
+}
+
 // Glitch button
 
 $clip: polygon(0 0, 68% 0, 71% 7%, 95% 8%, 100% 30%, 100% 100%, 5% 100%, 0 76%);

@@ -158,11 +158,11 @@ function watchFiles() {
 
 function watchStaticFiles() {
   // styles
-  watch("dev/lpFiles/wog/styles/**/*", series(css));
+  watch("dev/static/styles/**/*", series(css));
   // images
-  watch("dev/lpFiles/wog/images/**/*.{png,jpg,gif,svg}", series(images));
+  watch("dev/static/images/**/*.{png,jpg,gif,svg}", series(images));
   // js
-  watch("dev/lpFiles/wog/js/**/*", series(js));
+  watch("dev/static/js/**/*", series(js));
 }
 
 // clean build folder
