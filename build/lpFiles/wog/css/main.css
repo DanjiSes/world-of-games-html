@@ -7479,7 +7479,13 @@ a:hover {
   z-index: 101;
   top: 0;
   right: 0;
-  height: 100vh;
+  height: 100%;
+  /* Fallback */
+  height: -moz-available;
+  height: -webkit-fill-available;
+  height: fill-available;
+  height: stretch;
+  /* Latest specification */
   z-index: 1001;
   transform: translateX(100%);
   transition: transform 0.4s;
