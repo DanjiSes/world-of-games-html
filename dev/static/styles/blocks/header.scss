@@ -133,3 +133,51 @@
     }
   }
 }
+
+@mixin header--lg() {
+  .wg-Header {
+    .container {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .wg-OpenMenuButton {
+    display: none;
+  }
+
+  .wg-MenuMobile {
+    position: static;
+    transform: none;
+    padding: 0;
+    clip-path: none;
+    width: 100%;
+    background: none;
+    transition: none;
+
+    &__inner {
+      padding: 0;
+      flex-direction: row;
+      background: none;
+    }
+
+    &__close {
+      display: none;
+    }
+
+    nav {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    ul {
+      display: flex;
+
+      li {
+        margin-bottom: 0;
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+}

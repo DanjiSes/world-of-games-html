@@ -1,0 +1,8 @@
+@include media-breakpoint-up("lg") {
+  html {
+    font-size: 16px;
+  }
+
+  // Includes
+  @include header--lg();
+}
