@@ -26,3 +26,20 @@
     clip-path: polygon(0 0, 0 100%, 95% 100%, 95% 88%, 99% 88%, 99% 0);
   }
 }
+
+@mixin reviews--md() {
+  .wg-ReviewsSlider {
+    width: 100%;
+
+    .swiper-slide {
+      opacity: 0.1;
+      transition: opacity 0.3s;
+    }
+
+    .swiper-slide-active,
+    .swiper-slide-active + .swiper-slide,
+    .swiper-slide-active + .swiper-slide + .swiper-slide {
+      opacity: 1;
+    }
+  }
+}

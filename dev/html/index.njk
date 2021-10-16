@@ -27,17 +27,39 @@
     });
 
     // Слайдер отзывов
-    const swiper = new Swiper('.swiper', {
-      effect: "cards",
-      grabCursor: true,
-      loop: true,
+    if (window.innerWidth >= 768) {
+      const swiper = new Swiper('.swiper', {
+        grabCursor: true,
+        loop: true,
+        slidesPerView: 2,
 
-      // Navigation arrows
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-      }
-    });
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        },
+
+        // Responsive
+        breakpoints: {
+          992: {
+            slidesPerView: 3
+          }
+        }
+      });
+    } else {
+      const swiper = new Swiper('.swiper', {
+        effect: "cards",
+        grabCursor: true,
+        loop: true,
+
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        }
+      });
+    }
+
     // Выключение скролла при открытом меню
     $('[href="#menu"]').click(function () {
       $('body').addClass('overflow-hidden');

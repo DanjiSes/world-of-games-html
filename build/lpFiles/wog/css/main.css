@@ -7695,6 +7695,20 @@ a:hover {
     transform: translateY(-50%);
   }
 }
+@media (min-width: 768px) {
+  .wg-ReviewsSlider {
+    width: 100%;
+  }
+  .wg-ReviewsSlider .swiper-slide {
+    opacity: 0.1;
+    transition: opacity 0.3s;
+  }
+  .wg-ReviewsSlider .swiper-slide-active,
+.wg-ReviewsSlider .swiper-slide-active + .swiper-slide,
+.wg-ReviewsSlider .swiper-slide-active + .swiper-slide + .swiper-slide {
+    opacity: 1;
+  }
+}
 @media (min-width: 992px) {
   html {
     font-size: 17px;

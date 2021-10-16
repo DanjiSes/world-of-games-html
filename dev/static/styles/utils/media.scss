@@ -3,6 +3,7 @@
 }
 
 @include media-breakpoint-up("md") {
+  @include reviews--md();
 }
 
 @include media-breakpoint-up("lg") {

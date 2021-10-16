@@ -578,11 +578,11 @@
               <!-- Slides -->
 
               <div class="swiper-slide">
-                <div class="wg-Review">
+                <div class="wg-Review mx-md-3">
                   <div class="wg-Review__inner bg-black p-3">
                     <div
                       class="mb-3 position-relative"
-                      style="width: 50%; max-width: 250px"
+                      style="width: 50%; max-width: 150px"
                     >
                       <div style="padding-top: 100%"></div>
                       <img
@@ -615,11 +615,11 @@
               </div>
 
               <div class="swiper-slide">
-                <div class="wg-Review">
+                <div class="wg-Review mx-md-3">
                   <div class="wg-Review__inner bg-black p-3">
                     <div
                       class="mb-3 position-relative"
-                      style="width: 50%; max-width: 250px"
+                      style="width: 50%; max-width: 150px"
                     >
                       <div style="padding-top: 100%"></div>
                       <img
@@ -652,11 +652,11 @@
               </div>
 
               <div class="swiper-slide">
-                <div class="wg-Review">
+                <div class="wg-Review mx-md-3">
                   <div class="wg-Review__inner bg-black p-3">
                     <div
                       class="mb-3 position-relative"
-                      style="width: 50%; max-width: 250px"
+                      style="width: 50%; max-width: 150px"
                     >
                       <div style="padding-top: 100%"></div>
                       <img
@@ -689,11 +689,11 @@
               </div>
 
               <div class="swiper-slide">
-                <div class="wg-Review">
+                <div class="wg-Review mx-md-3">
                   <div class="wg-Review__inner bg-black p-3">
                     <div
                       class="mb-3 position-relative"
-                      style="width: 50%; max-width: 250px"
+                      style="width: 50%; max-width: 150px"
                     >
                       <div style="padding-top: 100%"></div>
                       <img
@@ -726,11 +726,11 @@
               </div>
 
               <div class="swiper-slide">
-                <div class="wg-Review">
+                <div class="wg-Review mx-md-3">
                   <div class="wg-Review__inner bg-black p-3">
                     <div
                       class="mb-3 position-relative"
-                      style="width: 50%; max-width: 250px"
+                      style="width: 50%; max-width: 150px"
                     >
                       <div style="padding-top: 100%"></div>
                       <img
@@ -763,11 +763,11 @@
               </div>
 
               <div class="swiper-slide">
-                <div class="wg-Review">
+                <div class="wg-Review mx-md-3">
                   <div class="wg-Review__inner bg-black p-3">
                     <div
                       class="mb-3 position-relative"
-                      style="width: 50%; max-width: 250px"
+                      style="width: 50%; max-width: 150px"
                     >
                       <div style="padding-top: 100%"></div>
                       <img
@@ -800,11 +800,11 @@
               </div>
 
               <div class="swiper-slide">
-                <div class="wg-Review">
+                <div class="wg-Review mx-md-3">
                   <div class="wg-Review__inner bg-black p-3">
                     <div
                       class="mb-3 position-relative"
-                      style="width: 50%; max-width: 250px"
+                      style="width: 50%; max-width: 150px"
                     >
                       <div style="padding-top: 100%"></div>
                       <img
@@ -837,11 +837,11 @@
               </div>
 
               <div class="swiper-slide">
-                <div class="wg-Review">
+                <div class="wg-Review mx-md-3">
                   <div class="wg-Review__inner bg-black p-3">
                     <div
                       class="mb-3 position-relative"
-                      style="width: 50%; max-width: 250px"
+                      style="width: 50%; max-width: 150px"
                     >
                       <div style="padding-top: 100%"></div>
                       <img
@@ -874,11 +874,11 @@
               </div>
 
               <div class="swiper-slide">
-                <div class="wg-Review">
+                <div class="wg-Review mx-md-3">
                   <div class="wg-Review__inner bg-black p-3">
                     <div
                       class="mb-3 position-relative"
-                      style="width: 50%; max-width: 250px"
+                      style="width: 50%; max-width: 150px"
                     >
                       <div style="padding-top: 100%"></div>
                       <img
@@ -911,11 +911,11 @@
               </div>
 
               <div class="swiper-slide">
-                <div class="wg-Review">
+                <div class="wg-Review mx-md-3">
                   <div class="wg-Review__inner bg-black p-3">
                     <div
                       class="mb-3 position-relative"
-                      style="width: 50%; max-width: 250px"
+                      style="width: 50%; max-width: 150px"
                     >
                       <div style="padding-top: 100%"></div>
                       <img
@@ -1144,17 +1144,39 @@
       });
 
       // Слайдер отзывов
-      const swiper = new Swiper(".swiper", {
-        effect: "cards",
-        grabCursor: true,
-        loop: true,
+      if (window.innerWidth >= 768) {
+        const swiper = new Swiper(".swiper", {
+          grabCursor: true,
+          loop: true,
+          slidesPerView: 2,
 
-        // Navigation arrows
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
+          // Navigation arrows
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+
+          // Responsive
+          breakpoints: {
+            992: {
+              slidesPerView: 3,
+            },
+          },
+        });
+      } else {
+        const swiper = new Swiper(".swiper", {
+          effect: "cards",
+          grabCursor: true,
+          loop: true,
+
+          // Navigation arrows
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      }
+
       // Выключение скролла при открытом меню
       $('[href="#menu"]').click(function () {
         $("body").addClass("overflow-hidden");
