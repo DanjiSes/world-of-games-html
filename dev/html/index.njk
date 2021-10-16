@@ -63,9 +63,17 @@
     // Выключение скролла при открытом меню
     $('[href="#menu"]').click(function () {
       $('body').addClass('overflow-hidden');
-    })
+    });
     $('[href="#closeMenu"]').click(function () {
       $('body').removeClass('overflow-hidden');
-    })
+    });
+    // Купить билеты
+    $('a[href="#sessions"]').click(function (e) {
+      var el = document.querySelector(this.attributes.href.nodeValue);
+      if (el.scrollIntoView) {
+        e.preventDefault();
+        el.scrollIntoView();
+      }
+    });
   </script>
 {% endblock %}
