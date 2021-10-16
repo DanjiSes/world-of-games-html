@@ -7696,6 +7696,10 @@ a:hover {
   }
 }
 @media (min-width: 768px) {
+  .wg-Header__Logo {
+    margin-left: 0;
+  }
+
   .wg-ReviewsSlider {
     width: 100%;
   }

@@ -134,6 +134,14 @@
   }
 }
 
+@mixin header--md() {
+  .wg-Header {
+    &__Logo {
+      margin-left: 0;
+    }
+  }
+}
+
 @mixin header--lg() {
   .wg-Header {
     .container {

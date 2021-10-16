@@ -3,6 +3,7 @@
 }
 
 @include media-breakpoint-up("md") {
+  @include header--md();
   @include reviews--md();
 }
 
