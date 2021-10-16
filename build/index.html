@@ -55,12 +55,14 @@
             />
           </div>
 
-          <a href="#menu" class="wg-OpenMenuButton">
+          <a href="#menu" data-no-anchor class="wg-OpenMenuButton">
             <span hidden>Открыть меню</span>
           </a>
 
           <div class="wg-MenuMobile" id="menu">
-            <a href="#closeMenu" class="wg-MenuMobile__close">+</a>
+            <a href="#closeMenu" data-no-anchor class="wg-MenuMobile__close"
+              >+</a
+            >
             <div class="wg-MenuMobile__inner">
               <nav class="my-auto">
                 <ul>
@@ -1183,14 +1185,6 @@
       });
       $('[href="#closeMenu"]').click(function () {
         $("body").removeClass("overflow-hidden");
-      });
-      // Купить билеты
-      $('a[href="#sessions"]').click(function (e) {
-        var el = document.querySelector(this.attributes.href.nodeValue);
-        if (el.scrollIntoView) {
-          e.preventDefault();
-          el.scrollIntoView();
-        }
       });
     </script>
   </body>
