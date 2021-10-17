@@ -61,11 +61,6 @@ function css() {
 function cssMin() {
   return src("dev/static/styles/main.scss")
     .pipe(sass())
-    .pipe(
-      purgecss({
-        content: [buildPath + "/lpFiles/*.html"],
-      })
-    )
     .pipe(cleanCSS({ compatibility: "ie8" }))
     .pipe(dest(buildPath + "/lpFiles/wog/css"))
     .pipe(browserSync.stream());
@@ -78,8 +73,6 @@ function cssMin() {
 function jsLibs(cb) {
   const libs = [
     "node_modules/jquery/dist/jquery.min.js",
-    "libs/mg-glitch/mgGlitch.min.js",
-    "node_modules/bootstrap/dist/js/bootstrap.min.js",
     "node_modules/slick-carousel/slick/slick.min.js",
     "node_modules/swiper/swiper-bundle.min.js",
   ];
