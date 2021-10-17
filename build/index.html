@@ -621,7 +621,7 @@
           <h2 class="h1 text-center mb-4">Отзывы</h2>
 
           <!-- Slider main container -->
-          <div class="wg-ReviewsSlider swiper">
+          <div class="wg-ReviewsSlider swiper js-reviews-slider">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <!-- Slides -->
@@ -1194,7 +1194,7 @@
 
       // Слайдер отзывов
       if (window.innerWidth >= 768) {
-        const swiper = new Swiper(".swiper", {
+        const swiper = new Swiper(".js-reviews-slider", {
           grabCursor: true,
           loop: true,
           slidesPerView: 2,
@@ -1213,7 +1213,7 @@
           },
         });
       } else {
-        const swiper = new Swiper(".swiper", {
+        const swiper = new Swiper(".js-reviews-slider", {
           effect: "cards",
           grabCursor: true,
           loop: true,

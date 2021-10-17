@@ -28,7 +28,7 @@
 
     // Слайдер отзывов
     if (window.innerWidth >= 768) {
-      const swiper = new Swiper('.swiper', {
+      const swiper = new Swiper('.js-reviews-slider', {
         grabCursor: true,
         loop: true,
         slidesPerView: 2,
@@ -47,7 +47,7 @@
         }
       });
     } else {
-      const swiper = new Swiper('.swiper', {
+      const swiper = new Swiper('.js-reviews-slider', {
         effect: "cards",
         grabCursor: true,
         loop: true,
