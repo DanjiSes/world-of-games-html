@@ -78,7 +78,6 @@ $(function () {
     $(window).on("scroll", onScroll);
   });
 
-  // Купить билеты
   $('a[href^="#"]:not([data-no-anchor])').click(function (e) {
     var el = document.querySelector(this.attributes.href.nodeValue);
     if (el.scrollIntoView) {
