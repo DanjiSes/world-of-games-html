@@ -125,9 +125,16 @@
     li {
       margin-bottom: rem(20px);
 
+      a {
+        transition: all 0.3s;
+        padding: rem(10px);
+        @include corners(rem(12px) 1px solid transparent);
+      }
+
       &:hover {
         a {
           color: $primary;
+          @include corners(rem(12px) 1px solid $primary);
         }
       }
     }

@@ -8,8 +8,9 @@
 }
 
 @include media-breakpoint-up("lg") {
-  html {
-    font-size: 17px;
+  h1,
+  .h1 {
+    font-size: 3rem;
   }
 
   @include header--lg();
@@ -20,9 +21,5 @@
 }
 
 @include media-breakpoint-up("xxl") {
-  html {
-    font-size: 22px;
-  }
-
   @include first--xxl();
 }

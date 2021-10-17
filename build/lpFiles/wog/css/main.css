@@ -7547,8 +7547,16 @@ a:hover {
 .wg-MenuMobile ul li {
   margin-bottom: 1.25rem;
 }
+.wg-MenuMobile ul li a {
+  transition: all 0.3s;
+  padding: 0.625rem;
+  border: 1px solid transparent;
+  clip-path: polygon(0 0.75rem, 0 0, 0.75rem 0, 0.75rem 2px, calc(100% - 0.75rem) 2px, calc(100% - 0.75rem) 0, 100% 0, 100% 0.75rem, calc(100% - 2px - 1px) 0.75rem, calc(100% - 2px - 1px) calc(100% - 0.75rem), 100% calc(100% - 0.75rem), 100% 100%, calc(100% - 0.75rem) 100%, calc(100% - 0.75rem) calc(100% - 2px - 1px), 0.75rem calc(100% - 2px - 1px), 0.75rem 100%, 0 100%, 0 calc(100% - 0.75rem), 2px calc(100% - 0.75rem), 2px 0.75rem);
+}
 .wg-MenuMobile ul li:hover a {
   color: #fbff2f;
+  border: 1px solid #fbff2f;
+  clip-path: polygon(0 0.75rem, 0 0, 0.75rem 0, 0.75rem 2px, calc(100% - 0.75rem) 2px, calc(100% - 0.75rem) 0, 100% 0, 100% 0.75rem, calc(100% - 2px - 1px) 0.75rem, calc(100% - 2px - 1px) calc(100% - 0.75rem), 100% calc(100% - 0.75rem), 100% 100%, calc(100% - 0.75rem) 100%, calc(100% - 0.75rem) calc(100% - 2px - 1px), 0.75rem calc(100% - 2px - 1px), 0.75rem 100%, 0 100%, 0 calc(100% - 0.75rem), 2px calc(100% - 0.75rem), 2px 0.75rem);
 }
 
 .wg-DateStart {
@@ -7714,8 +7722,9 @@ a:hover {
   }
 }
 @media (min-width: 992px) {
-  html {
-    font-size: 17px;
+  h1,
+.h1 {
+    font-size: 3rem;
   }
 
   .wg-Header .container {
@@ -7763,10 +7772,6 @@ a:hover {
   }
 }
 @media (min-width: 1400px) {
-  html {
-    font-size: 22px;
-  }
-
   .wg-first-decor {
     width: 50%;
     right: 0;
