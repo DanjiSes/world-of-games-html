@@ -3,21 +3,17 @@
     <h2 class="h1">Саундтреки</h2>
     <p class="mb-5">На шоу вы услышите саундтреки из популярных видеоигр</p>
 
-    <div class="js-albums-slider">
-      {% for i in range(0, 4) %}
+    <div class="js-albums-slider wg-AlbumsSlider slick-slider">
+      {% for i in range(0, 25) %}
+
         <div>
-          <div class="js-albums-slider__slide">
-
-            {% for a in range(0, 4) %}
-
-              <div class="wg-Album">
-                <div class="wg-Album__preview">
-                  <img src="lpFiles/wog/images/albums/01.png" alt="HALF-LIFE 2">
-                </div>
-                <strong class="wg-Album__name">HALF-LIFE {{i+a}}</strong>
+          <div class="wg-AlbumsSlider__slide">
+            <div class="wg-Album">
+              <div class="wg-Album__preview">
+                <img src="lpFiles/wog/images/albums/01.png" alt="HALF-LIFE 2">
               </div>
-
-            {% endfor %}
+              <strong class="wg-Album__name">HALF-LIFE</strong>
+            </div>
 
           </div>
         </div>

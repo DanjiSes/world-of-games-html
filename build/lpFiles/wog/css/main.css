@@ -7206,6 +7206,10 @@ a {
   transform: rotate(180deg);
 }
 
+.slick-slider:not(.slick-initialized) {
+  display: none;
+}
+
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
@@ -7622,16 +7626,38 @@ a:hover {
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.9);
 }
 
-.js-albums-slider__slide {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+.wg-AlbumsSlider__slide {
+  padding: 0 0.9375rem;
 }
-.js-albums-slider__slide > .wg-Album {
-  width: 40%;
-  margin-bottom: 10%;
+.wg-AlbumsSlider .slick-next {
+  right: -1.25rem;
+}
+.wg-AlbumsSlider .slick-prev {
+  left: -1.25rem;
 }
 
+@media (max-width: 991.98px) {
+  .wg-AlbumsSlider__slide {
+    padding: 0 0.625rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .wg-AlbumsSlider__slide {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .wg-AlbumsSlider__slide > .wg-Album {
+    width: 45%;
+    margin-bottom: 10%;
+  }
+  .wg-AlbumsSlider .slick-next {
+    right: -0.3125rem;
+  }
+  .wg-AlbumsSlider .slick-prev {
+    left: -0.3125rem;
+  }
+}
 .wg-ReviewsSlider {
   width: 90%;
   height: auto;
@@ -7764,11 +7790,6 @@ a:hover {
     margin-bottom: 0;
     margin-left: 1rem;
     margin-right: 1rem;
-  }
-
-  .js-albums-slider__slide > .wg-Album {
-    width: 20%;
-    margin-bottom: 0%;
   }
 }
 @media (min-width: 1400px) {

@@ -98,6 +98,10 @@ a {
   }
 }
 
+.slick-slider:not(.slick-initialized) {
+  display: none;
+}
+
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;

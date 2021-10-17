@@ -29,26 +29,56 @@
   }
 }
 
-.js-albums-slider {
+.wg-AlbumsSlider {
   &__slide {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    padding: 0 rem(15px);
+  }
 
-    & > .wg-Album {
-      width: 40%;
-      margin-bottom: 10%;
-    }
+  .slick-next {
+    right: rem(-20px);
+  }
+
+  .slick-prev {
+    left: rem(-20px);
   }
 }
 
-@mixin sounds--lg() {
-  .js-albums-slider {
+@include media-breakpoint-down("lg") {
+  .wg-AlbumsSlider {
     &__slide {
+      padding: 0 rem(10px);
+    }
+  }
+
+  // .wg-AlbumsSlider {
+  //   &__slide {
+  //     & > .wg-Album {
+  //       width: 20%;
+  //       margin-bottom: 0%;
+  //     }
+  //   }
+  // }
+}
+
+@include media-breakpoint-down("md") {
+  .wg-AlbumsSlider {
+    &__slide {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
       & > .wg-Album {
-        width: 20%;
-        margin-bottom: 0%;
+        width: 45%;
+        margin-bottom: 10%;
       }
+    }
+
+    .slick-next {
+      right: rem(-5px);
+    }
+
+    .slick-prev {
+      left: rem(-5px);
     }
   }
 }

@@ -14,7 +14,6 @@
   }
 
   @include header--lg();
-  @include sounds--lg();
 }
 
 @include media-breakpoint-up("xl") {
