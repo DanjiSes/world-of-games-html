@@ -20,6 +20,7 @@ const del = require("del");
 const cleanCSS = require("gulp-clean-css");
 const htmlmin = require("gulp-htmlmin");
 const prettier = require("gulp-prettier");
+const purgecss = require("gulp-purgecss");
 
 // Папка для билда
 const buildPath = "build";
@@ -58,8 +59,13 @@ function css() {
 }
 
 function cssMin() {
-  return src("dev/lpFiles/wog/styles/main.scss")
+  return src("dev/static/styles/main.scss")
     .pipe(sass())
+    .pipe(
+      purgecss({
+        content: [buildPath + "/lpFiles/*.html"],
+      })
+    )
     .pipe(cleanCSS({ compatibility: "ie8" }))
     .pipe(dest(buildPath + "/lpFiles/wog/css"))
     .pipe(browserSync.stream());
@@ -189,7 +195,8 @@ exports.default = series(
 );
 exports.buildMin = series(
   clean,
-  parallel(htmlMin, cssMin, js, jsLibs, copyFiles, assets, fonts, images)
+  htmlMin,
+  parallel(cssMin, js, jsLibs, copyFiles, assets, fonts, images)
 );
 exports.build = series(
   clean,
