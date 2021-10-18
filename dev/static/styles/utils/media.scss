@@ -4,6 +4,7 @@
 
 @include media-breakpoint-up("md") {
   @include header--md();
+  @include first--md();
   @include reviews--md();
 }
 
@@ -20,9 +21,11 @@
   }
 
   @include header--lg();
+  @include first--lg();
 }
 
 @include media-breakpoint-up("xl") {
+  @include first--xl();
 }
 
 @include media-breakpoint-up("xxl") {

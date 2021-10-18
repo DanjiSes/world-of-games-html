@@ -1,3 +1,25 @@
+@keyframes sphere {
+  0% {
+    transform: translate(0%, -50%);
+  }
+
+  25% {
+    transform: translate(-2%, -52%);
+  }
+
+  50% {
+    transform: translate(2%, -48%);
+  }
+
+  75% {
+    transform: translate(2%, -52%);
+  }
+
+  100% {
+    transform: translate(2%, -48%);
+  }
+}
+
 .wg-DateStart {
   padding: rem(10px) rem(35px);
   font-family: $accent-font;
@@ -12,6 +34,11 @@
   width: 100%;
   z-index: -1;
   transform: rotate(28deg);
+  animation-name: sphere;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
 }
 
 .wg-first-decor-lines {
@@ -48,6 +75,27 @@
     top: calc(50% + 100px);
     transform: translateY(-50%);
   }
+}
+
+@mixin first--md() {
+  #main .h1 {
+    max-width: 380px;
+
+    & + p {
+      max-width: 300px;
+    }
+  }
+}
+@mixin first--lg() {
+  #main .h1 {
+    max-width: 460px;
+
+    & + p {
+      max-width: 360px;
+    }
+  }
+}
+@mixin first--xl() {
 }
 
 @mixin first--xxl() {
