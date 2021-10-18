@@ -43,12 +43,22 @@
           <div class="fw-light">билеты от <span class="text-primary fw-bold">1000 рублей</span></div>
         </div>
         {# Buy #}
-        <a class="wg-Btn text-nowrap" target="_blank" href="https://iframeab-pre5472.intickets.ru/seance/12006786">
-          Купить билеты
-        </a>
+        <a class="wg-Btn text-nowrap abiframelnk" href="https://w.intickets.ru/seance/12006786/?wkey=11178534">Купить билет</a>
       </div>
 
     {% endfor %}
 
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="byTicketsModal" tabindex="-1" aria-labelledby="byTicketsModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 90%; height: 90%;">
+      <div class="modal-content h-100 position-relative">
+        <button type="button" class="btn-close position-absolute text-dark" data-bs-dismiss="modal" aria-label="Закрыть" style="top: 9px;right: 19px;z-index: 11;background: none;border: none;font-size: 2rem;transform: rotate(45deg);">+</button>
+        <div class="modal-body text-dark bg-primary h-100">
+          Сюда скриптом вставляется фрейм
+        </div>
+      </div>
+    </div>
   </div>
 </section>
