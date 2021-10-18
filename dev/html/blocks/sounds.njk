@@ -1,9 +1,9 @@
 <section class="py-5" id="sounds">
-  <div class="container text-center">
+  <div class="container text-center text-md-start">
     <h2 class="h1">Саундтреки</h2>
     <p class="mb-5">На шоу вы услышите саундтреки из популярных видеоигр</p>
 
-    <div class="js-albums-slider wg-AlbumsSlider slick-slider">
+    <div class="js-albums-slider wg-AlbumsSlider slick-slider text-center">
       {% for i in range(0, 25) %}
 
         <div>
@@ -21,26 +21,27 @@
       {% endfor %}
     </div>
 
-    <div class="py-4"></div>
+    <div class="py-4 py-lg-5"></div>
 
-    <div class="position-relative pt-2" id="sessions">
-      <img class="position-absolute top-50 start-50 translate-middle" style="width: 90%; z-index: -1;" src="lpFiles/wog/images/seans-decor.svg" alt=""/>
+    <div class="position-relative pt-2 pt-lg-5" id="sessions">
+      <img class="position-absolute top-50 start-50 translate-middle d-md-none" style="width: 90%; z-index: -1;" src="lpFiles/wog/images/seans-decor.svg" alt=""/>
+      <img class="position-absolute top-50 start-50 translate-middle d-none d-md-inline" style="width: 90%; z-index: -1; opacity: 0.2;" src="lpFiles/wog/images/seans-decor.svg" alt=""/>
       <h2 class="h1">Сеансы</h2>
     </div>
 
     {% for i in range(0, 3) %}
 
       {# Session #}
-      <div class="mt-4 mx-auto d-md-flex align-items-center justify-content-between" style="width: 85%;">
+      <div class="mt-4 mx-auto mx-md-0 d-md-flex align-items-center justify-content-between">
         {# Time #}
-        <div style="min-width: 11rem;">
-          <div class="text-info">18:00</div>
+        <div class="d-md-flex flex-row-reverse justify-content-start">
+          <div class="text-info mx-md-3">18:00</div>
           <div class="text-secondary">26.08.21</div>
         </div>
         {# Place #}
-        <div class="mt-2 mb-3">
+        <div class="mt-2 mb-3 d-md-flex">
           <div>Дом Кино, Vegas City Hall</div>
-          <div class="fw-light">билеты от <span class="text-primary fw-bold">1000 рублей</span></div>
+          <div class="fw-light mx-md-4">билеты от <span class="text-primary fw-bold">1000 рублей</span></div>
         </div>
         {# Buy #}
         <a class="wg-Btn text-nowrap abiframelnk" href="https://w.intickets.ru/seance/12006786/?wkey=11178534">Купить билет</a>

@@ -1,14 +1,18 @@
 <section class="pt-5 pb-4" id="map">
   <div class="container">
-    <h2 class="h1 text-center mb-2">Как добраться</h2>
-    <div class="text-center mb-1">ул. Караванная, д. 12.</div>
-    <div class="d-flex align-items-center justify-content-center fw-light">
-      <img src="lpFiles/wog/images/metro-icon.png" alt="" style="width: 0.9rem;">
-      <span class="ms-1">Невский проспект</span>
-    </div>
-    <div class="d-flex align-items-center justify-content-center fw-light">
-      <img src="lpFiles/wog/images/metro-icon.png" alt=""  style="width: 0.9rem;">
-      <span class="ms-1">Маяковская</span>
+    <h2 class="h1 text-center text-md-start mb-2">Как добраться</h2>
+    <div class="d-md-flex justify-content-between">
+      <div class="text-center mb-1 mb-md-0">ул. Караванная, д. 12.</div>
+      <div class="text-md-end">
+        <div class="d-flex align-items-center justify-content-center justify-content-md-end fw-light">
+          <img src="lpFiles/wog/images/metro-icon.png" alt="" style="width: 0.9rem;">
+          <span class="ms-1">Невский проспект</span>
+        </div>
+        <div class="d-flex align-items-center justify-content-center justify-content-md-end fw-light">
+          <img src="lpFiles/wog/images/metro-icon.png" alt=""  style="width: 0.9rem;">
+          <span class="ms-1">Маяковская</span>
+        </div>
+      </div>
     </div>
 
     <div class="py-3"></div>
@@ -16,7 +20,7 @@
     {# Map #}
     <div class="wg-Map">
       <div class="wg-Map__inner">
-        <div class="embed-responsive embed-responsive-16by9" data-html-on-visible='<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac01ae473da5ff371c97d7528904c9f5c3cb74386a31c7f130b617ff272f1a192&amp;source=constructor" frameborder="0"></iframe>'>
+        <div data-html-on-visible='<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac01ae473da5ff371c97d7528904c9f5c3cb74386a31c7f130b617ff272f1a192&amp;source=constructor" frameborder="0" style="width: 100%; height: 400px;"></iframe>'>
           <!-- Сюда будет вставляться карта когда до этого места доскроллят -->
         </div>
       </div>
