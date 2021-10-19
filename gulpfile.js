@@ -75,6 +75,7 @@ function jsLibs(cb) {
     "node_modules/jquery/dist/jquery.min.js",
     "node_modules/slick-carousel/slick/slick.min.js",
     "node_modules/swiper/swiper-bundle.min.js",
+    "node_modules/bootstrap/dist/js/bootstrap.min.js",
   ];
 
   if (!libs.length) return cb();
