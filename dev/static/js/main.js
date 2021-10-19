@@ -78,7 +78,7 @@ $(function () {
     $(window).on("scroll", onScroll);
   });
 
-  $('a[href^="#"]:not([data-no-anchor])').click(function (e) {
+  $('a[href^="#"]:not([data-no-anchor])').on("click", function (e) {
     var el = document.querySelector(this.attributes.href.nodeValue);
     if (el.scrollIntoView) {
       e.preventDefault();

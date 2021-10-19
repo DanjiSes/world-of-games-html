@@ -103,13 +103,13 @@
     }
 
     // Выключение скролла при открытом меню
-    $('[href="#menu"]').click(function () {
-      $('body').addClass('overflow-hidden');
+    $('[href="#menu"]').on('click', function () {
+      $('body').css('overflow', 'hidden');
     });
-    $('[href="#closeMenu"]').click(function () {
-      $('body').removeClass('overflow-hidden');
+    $('[href="#closeMenu"]').on('click', function () {
+      $('body').css('overflow', 'auto');
     });
-    $('.wg-Header a[href^="#"]').click(function () {
+    $('.wg-Header nav a[href^="#"]').on('click', function () {
       window.location.hash = "#closeMenu";
-      $('body').removeClass('overflow-hidden');
+      $('body').css('overflow', 'auto');
     });</script></body></html>
