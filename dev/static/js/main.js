@@ -91,4 +91,14 @@ $(function () {
   setInterval(function () {
     $glitching.toggleClass("wg-glitching");
   }, 2000);
+
+  var $covidFree = $("#covid-free");
+
+  $(window).on("scroll", function () {
+    if (window.scrollY > 1000) {
+      $covidFree.css("opacity", 0);
+    } else {
+      $covidFree.css("opacity", 1);
+    }
+  });
 });
