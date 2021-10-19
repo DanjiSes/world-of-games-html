@@ -3,6 +3,10 @@
 }
 
 @include media-breakpoint-up("md") {
+  .text-md-info {
+    color: $info !important;
+  }
+
   @include header--md();
   @include first--md();
   @include reviews--md();
@@ -18,6 +22,10 @@
     background-size: 80%;
     background-repeat: repeat-y;
     background-position: right;
+  }
+
+  .text-lg-info {
+    color: $info !important;
   }
 
   @include header--lg();
