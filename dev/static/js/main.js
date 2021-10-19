@@ -85,4 +85,10 @@ $(function () {
       el.scrollIntoView();
     }
   });
+
+  var $glitching = $(".wg-glitch");
+
+  setInterval(function () {
+    $glitching.toggleClass("wg-glitching");
+  }, 2000);
 });
