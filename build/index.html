@@ -96,20 +96,25 @@
         </div>
       </header>
 
-      <a href="#covidFreeInfo" data-bs-toggle="modal" data-no-anchor>
+      <a
+        href="#covidFreeInfo"
+        data-bs-toggle="modal"
+        data-no-anchor
+        class="position-fixed d-block"
+        style="
+          bottom: -5px;
+          right: 1rem;
+          width: 24%;
+          max-width: 10rem;
+          z-index: 9;
+          transition: all 0.5s;
+        "
+      >
         <img
           id="covid-free"
           src="lpFiles/wog/images/covid-free.svg"
           alt="COVID-free"
-          class="position-fixed"
-          style="
-            bottom: -5px;
-            right: 1rem;
-            width: 24%;
-            max-width: 10rem;
-            z-index: 9;
-            transition: all 0.5s;
-          "
+          class="w-100"
         />
       </a>
 
@@ -123,11 +128,15 @@
             src="lpFiles/wog/images/decor-lines.svg"
             alt=""
           />
-          <img
+
+          <video
             class="wg-first-decor"
-            src="lpFiles/wog/images/sphere.gif"
-            alt=""
-          />
+            poster="lpFiles/wog/images/sphere.png"
+            muted
+            autoplay
+          >
+            <source src="lpFiles/wog/images/sphere.mp4" type="video/mp4" />
+          </video>
 
           <div
             class="
@@ -289,7 +298,7 @@
             <div class="col-12 col-lg-7">
               <div
                 class="wg-VideoWrap mb-3"
-                data-html-on-visible='<div class="embed-responsive embed-responsive-16by9"><iframe width="560" height="315" src="https://www.youtube.com/embed/M7lc1UVf-VE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>'
+                data-html-on-visible='<div class="embed-responsive embed-responsive-16by9"><iframe width="560" height="315" src="https://www.youtube.com/embed/g8ceDvm0wo8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>'
               >
                 <div class="embed-responsive embed-responsive-16by9"></div>
               </div>
@@ -702,7 +711,9 @@
             aria-hidden="true"
           >
             <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content bg-transparent position-relative">
+              <div
+                class="modal-content bg-transparent position-relative border-0"
+              >
                 <button
                   type="button"
                   class="btn-close position-absolute text-dark"
@@ -858,11 +869,15 @@
       </section>
 
       <div class="container position-relative">
-        <img
+        <video
           class="wg-first-decor"
-          src="lpFiles/wog/images/sphere.gif"
-          alt=""
-        />
+          poster="lpFiles/wog/images/sphere.png"
+          muted
+          autoplay
+          loop
+        >
+          <source src="lpFiles/wog/images/sphere.mp4" type="video/mp4" />
+        </video>
       </div>
 
       <section class="py-5 overflow-hidden" id="reviews">

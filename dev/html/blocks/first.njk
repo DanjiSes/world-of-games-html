@@ -1,5 +1,5 @@
-<a href="#covidFreeInfo" data-bs-toggle="modal" data-no-anchor>
-  <img id="covid-free" src="lpFiles/wog/images/covid-free.svg" alt="COVID-free" class="position-fixed" style="bottom: -5px; right: 1rem; width: 24%; max-width: 10rem; z-index: 9; transition: all 0.5s;">
+<a href="#covidFreeInfo" data-bs-toggle="modal" data-no-anchor class="position-fixed d-block" style="bottom: -5px; right: 1rem; width: 24%; max-width: 10rem; z-index: 9; transition: all 0.5s;">
+  <img id="covid-free" src="lpFiles/wog/images/covid-free.svg" alt="COVID-free" class="w-100">
 </a>
 
 <main id="main" class="overflow-hidden" style="min-height: 100vh;">
@@ -7,7 +7,10 @@
   <div class="d-flex align-items-center position-relative" style="padding-top: 145px;">
     {# Decor #}
     <img class="wg-first-decor-lines d-sm-none" src="lpFiles/wog/images/decor-lines.svg" alt="">
-    <img class="wg-first-decor" src="lpFiles/wog/images/sphere.gif" alt="">
+    {# <img class="wg-first-decor" src="lpFiles/wog/images/sphere.png" alt=""> #}
+    <video class="wg-first-decor" poster="lpFiles/wog/images/sphere.png" muted autoplay>
+      <source src="lpFiles/wog/images/sphere.mp4" type="video/mp4">
+    </video>
 
     <div class="container text-center text-sm-start pt-sm-5 position-relative">
       {# Date #}
