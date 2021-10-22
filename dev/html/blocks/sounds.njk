@@ -1,5 +1,3 @@
-<div data-html-on-visible='<link rel="stylesheet" href="//s3.intickets.ru/intickets.min.css"><script src="//s3.intickets.ru/intickets.min.js"></script>'></div>
-
 <section class="py-5" id="sounds">
   <div class="container text-center text-md-start">
     <h2 class="h1">
@@ -8,13 +6,13 @@
     <p class="mb-5">На шоу вы услышите саундтреки из популярных видеоигр</p>
 
     <div class="js-albums-slider wg-AlbumsSlider slick-slider text-center">
-      {% for i in range(1, 22) %}
+      {% for i in range(1, 21) %}
 
         <div>
           <div class="wg-AlbumsSlider__slide">
             <div class="wg-Album">
               <div class="wg-Album__preview">
-                {% if i < 9 %}
+                {% if i <= 9 %}
                   <img data-lazy="lpFiles/wog/images/albums/0{{ i }}.png" alt="HALF-LIFE 2">
                 {% endif %}
                 {% if i > 9 %}
