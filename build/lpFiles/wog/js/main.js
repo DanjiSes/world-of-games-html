@@ -2,14 +2,16 @@ $.fn.is_on_screen = function () {
   var win = $(window);
   var viewport = {
     top: win.scrollTop(),
+    left: win.scrollLeft(),
   };
+  viewport.right = viewport.left + win.width();
   viewport.bottom = viewport.top + win.height();
 
   var bounds = this.offset();
+  bounds.right = bounds.left + this.outerWidth();
+  bounds.bottom = bounds.top + this.outerHeight();
 
-  var isOnScreen = !(viewport.bottom < bounds.top - 500);
-
-  return isOnScreen;
+  return viewport.bottom > bounds.top - 200;
 };
 
 function chunkArray(array, size) {
@@ -29,12 +31,18 @@ $(function () {
   $("[data-html-on-visible]").each(function () {
     var $this = $(this);
 
+    if ($this.is_on_screen()) {
+      $this.html($this.attr("data-html-on-visible"));
+      return;
+    }
+
     var onScroll = function () {
       if ($this.is_on_screen()) {
         $this.html($this.attr("data-html-on-visible"));
         $(window).off("scroll", onScroll);
       }
     };
+
     $(window).on("scroll", onScroll);
   });
 
