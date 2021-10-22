@@ -28,11 +28,7 @@ function chunkArray(array, size) {
 $(function () {
   $("[data-html-on-visible]").each(function () {
     var $this = $(this);
-    var offsetTop = +$this.attr("data-offset-top") || 0;
-    if ($this.is_on_screen({ offsetTop: offsetTop })) {
-      $this.html($this.attr("data-html-on-visible"));
-      return;
-    }
+
     var onScroll = function () {
       if ($this.is_on_screen()) {
         $this.html($this.attr("data-html-on-visible"));
