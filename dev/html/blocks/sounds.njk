@@ -8,13 +8,18 @@
     <p class="mb-5">На шоу вы услышите саундтреки из популярных видеоигр</p>
 
     <div class="js-albums-slider wg-AlbumsSlider slick-slider text-center">
-      {% for i in range(0, 25) %}
+      {% for i in range(1, 22) %}
 
         <div>
           <div class="wg-AlbumsSlider__slide">
             <div class="wg-Album">
               <div class="wg-Album__preview">
-                <img src="lpFiles/wog/images/albums/01.png" alt="HALF-LIFE 2">
+                {% if i < 9 %}
+                  <img data-lazy="lpFiles/wog/images/albums/0{{ i }}.png" alt="HALF-LIFE 2">
+                {% endif %}
+                {% if i > 9 %}
+                  <img data-lazy="lpFiles/wog/images/albums/{{ i }}.png" alt="HALF-LIFE 2">
+                {% endif %}
               </div>
               <strong class="wg-Album__name">HALF-LIFE</strong>
             </div>
